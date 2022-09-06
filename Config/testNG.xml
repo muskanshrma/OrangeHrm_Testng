@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Orange HRM">
-    <test name="Test Basics">
+<!--<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">-->
+<!--<suite name="Orange HRM">-->
+<!--    <test name="Test Basics">-->
+<!--        <classes>-->
+<!--            <class name="Test.LoginTest"/>-->
+<!--            <class name="Test.AdminAddUser"/>-->
+<!--            <class name="Test.AddUserTest"/>-->
+
+
+<!--        </classes>-->
+<!--    </test>-->
+<!--</suite>-->
+
+        <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Cases" verbose="1" >
+<test name="Verify user is logged in">
+    <parameter name="testRunId1" value="TCTC-1"/>
+    <classes>
+        <class name="Test.LoginTest"/>
+    </classes>
+</test>
+<test name="Verify Admin">
+    <parameter name="testRunId" value="TCTC-2"/>
+    <classes>
+        <class name="Test.AdminAddUser"/>
+    </classes>
+</test>
+    <test name="Verify user is added">
+        <parameter name="testRunId3" value="TCTC-3"/>
         <classes>
-            <class name="Test.LoginTest"/>
-            <class name="Test.AdminAddUser"/>
             <class name="Test.AddUserTest"/>
-
-
         </classes>
     </test>
 </suite>
