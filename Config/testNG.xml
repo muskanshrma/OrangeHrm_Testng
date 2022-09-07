@@ -4,10 +4,10 @@
     <test name="Test Basics">
         <classes>
             <class name="Test.LoginPageTest"/>
-<!--            <class name="Test.AdminPageButtonClickTest"/>-->
-<!--            <class name="Test.AddUserDetailsAndSaveTest"/>-->
-<!--            <class name="Test.TC01ApplyLeaveTest"/>-->
-<!--            <class name="Test.TC09SearchLeaveList"/>-->
+            <class name="Test.AdminPageButtonClickTest"/>
+            <class name="Test.AddUserDetailsAndSaveTest"/>
+            <class name="Test.TC01ApplyLeaveTest"/>
+            <class name="Test.TC09SearchLeaveList"/>
 
 
         </classes>
