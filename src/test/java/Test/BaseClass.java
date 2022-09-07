@@ -23,16 +23,12 @@ public class BaseClass {
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         pagefactory = new PageFactory(driver);
     }
-@Test
-public static void verification(String locator,String expected)
-{
-    String actual = driver.findElement(By.xpath(locator)).getText();
-    Assert.isTrue(actual.contains(expected),"Expected not match");
-}
+
     @AfterClass
     public static void close() throws InterruptedException
     { Thread.sleep(2000);
         driver.close();
+        driver.quit();
     }
 
 }

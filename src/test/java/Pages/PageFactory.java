@@ -4,41 +4,47 @@ import org.openqa.selenium.WebDriver;
 
 public class PageFactory {
    WebDriver driver;
-    private Login login;
-    private Admin admin;
-    private AddUser addUser;
-    private User user;
-
+    private LoginPage loginPage;
+    private AdminPage adminPage;
+    private AddUserDetailsPage addUser;
+    private LeaveListPage leaveList;
+    private ApplyLeavePage applyleave;
 
 
   public PageFactory(WebDriver driver){
        this.driver=driver;
 
   }
-public Login getLoginPage() {
-    if(login==null){
-        login = new Login(driver);
+public LoginPage getLoginPage() {
+    if(loginPage ==null){
+        loginPage = new LoginPage(driver);
     }
-    return  login;
+    return loginPage;
 }
-    public Admin getAdmin(){
-        if(admin==null) {
-            admin = new Admin(driver);
+    public AdminPage getAdmin(){
+        if(adminPage ==null) {
+            adminPage = new AdminPage(driver);
         }
-        return admin;
-    }
-    public User getUser(){
-        if(user==null) {
-            user = new User(driver);
-        }
-        return user;
+        return adminPage;
     }
 
-    public AddUser getAddUser(){
-        if(addUser==null) {
-            addUser = new AddUser(driver);
+    public AddUserDetailsPage getAddUserDetailsPage(){
+        if(addUser ==null) {
+            addUser= new AddUserDetailsPage(driver);
         }
         return addUser;
+    }
+    public ApplyLeavePage getApplyLeavePage(){
+        if(applyleave ==null) {
+            applyleave = new ApplyLeavePage(driver);
+        }
+        return applyleave;
+    }
+    public LeaveListPage getLeaveListPage(){
+        if(leaveList ==null) {
+            leaveList = new LeaveListPage(driver);
+        }
+        return leaveList;
     }
 
     }
