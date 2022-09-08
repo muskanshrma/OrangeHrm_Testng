@@ -27,7 +27,6 @@ public class ApplyLeavePage {
         driver.findElement(applyButton).click();
         driver.findElement(logoutUser).click();
         driver.findElement(By.xpath("//*[contains(text(),'Logout')]")).click();
-        String actual = driver.findElement(By.xpath("//span[@class=\"oxd-text oxd-text--span\"]")).getText();
-        Assert.isTrue(actual.equals("Success"), "No search Results");
+
     }
 }

@@ -22,15 +22,14 @@ public class BaseClass {
     @BeforeClass
     public static void setup(String browserName) {
         if (browserName.equalsIgnoreCase("chrome")) {
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+            driver = WebDriverManager.chromedriver().create();
             driver.manage().window().maximize();
             driver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
             pageFactory = new PageFactory(driver);
-        } else if (browserName.equalsIgnoreCase("firefox")) {
-            WebDriverManager.firefoxdriver().setup();
-            driver = new FirefoxDriver();
+        }
+        else if (browserName.equalsIgnoreCase("firefox")) {
+            driver = WebDriverManager.firefoxdriver().create();
             driver.manage().window().maximize();
             driver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

@@ -20,7 +20,5 @@ public class LoginPage {
         driver.findElement(username).sendKeys("Admin");
         driver.findElement(password).sendKeys("admin123");
         driver.findElement(submit).click();
-        String actual = driver.findElement(By.xpath("//h6")).getText();
-        Assert.isTrue(actual.equals("PIM"),"LoginError");
     }
 }

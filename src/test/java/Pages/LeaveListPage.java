@@ -26,8 +26,6 @@ public class LeaveListPage {
         driver.findElement(employeeName).sendKeys("Odis");
         driver.findElement(By.xpath("//*[contains(text(),'Odis')]")).click();
         driver.findElement(searchButton).click();
-        String actual = driver.findElement(By.xpath("//span[@class='oxd-text oxd-text--span']")).getText();
-        Assert.isTrue(actual.equals("Records Found"), "No search Results");
         driver.findElement(logout).click();
         driver.findElement(By.xpath("//*[contains(text(),'Logout')]")).click();
     }
