@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Orange HRM">
-    <test name="Test Basics">
+    <test name="Verify user is logged in">
+        <parameter name="browserName" value="chrome"></parameter>
         <classes>
             <class name="Test.LoginPageTest"/>
+            </classes>
+    </test>
+    <test name="Verify user can navigate to Admin page">
+        <parameter name="browserName" value="chrome"></parameter>
+        <classes>
             <class name="Test.AdminPageButtonClickTest"/>
+        </classes>
+    </test>
+    <test name="Verify user can add and save user details">
+        <parameter name="browserName" value="firefox"></parameter>
+        <classes>
             <class name="Test.AddUserDetailsAndSaveTest"/>
+        </classes>
+    </test>
+    <test name="Verify user can apply for leave">
+        <parameter name="browserName" value="chrome"></parameter>
+        <classes>
             <class name="Test.TC01ApplyLeaveTest"/>
+        </classes>
+    </test>
+    <test name="verify uer can search leave list">
+        <parameter name="browserName" value="chrome"></parameter>
+        <classes>
             <class name="Test.TC09SearchLeaveList"/>
         </classes>
     </test>

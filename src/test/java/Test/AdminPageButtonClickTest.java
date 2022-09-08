@@ -2,19 +2,18 @@ package Test;
 
 import org.testng.annotations.Test;
 
-import static Test.BaseClass.pagefactory;
+import static Test.BaseClass.pageFactory;
 
 public class AdminPageButtonClickTest extends BaseClass {
+
     @Test(priority = 1)
     public void login() throws InterruptedException {
-        pagefactory.getLoginPage().login();
-      //  verification("//h6", "PIM");
+        pageFactory.getLoginPage().login();
     }
 
     @Test(priority = 2)
     public void admin() throws InterruptedException {
-        pagefactory.getAdmin().admin();
-      //  verification("//h6[1]", "Admin");
+        pageFactory.getAdmin().admin();
     }
 }
 
